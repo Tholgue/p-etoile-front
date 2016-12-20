@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Test bootstrap</title>
+        <link href="../Ressources/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">CS2i</a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Accueil</a></li>
+                            <li><a href="">Annuaire</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" placeholder="Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Password" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-success">Se connecter</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Liste des membres du CS2i
+                    </div>
+                    <div class="panel-body">
+                        <div id="demo">
+                            <h1>Test recup commit</h1>
+                            <template v-for="branch in branches">
+                                <input type="radio"
+                                       :id="branch"
+                                       :value="branch"
+                                       name="branch"
+                                       v-model="currentBranch">
+                                <label :for="branch">{{ branch }}</label>
+                            </template>
+                            <p>vuejs/vue@{{ currentBranch }}</p>
+                            <ul>
+                                <li v-for="record in commits">
+                                    <a :href="record.html_url" target="_blank" class="commit">{{ record.sha.slice(0, 7) }}</a>
+                                    - <span class="message">{{ record.commit.message | truncate }}</span><br>
+                                    by <span class="author"><a :href="record.author.html_url" target="_blank">{{ record.commit.author.name }}</a></span>
+                                    at <span class="date">{{ record.commit.author.date | formatDate }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../Ressources/dist/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="../Ressources/js/annuaire.js"></script>       
+    </body>
+</html>
