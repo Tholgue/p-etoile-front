@@ -34,7 +34,7 @@ $(document).ready(function () {
             return false;
         }
         //inscriptionMembre;
-       // lectureMembres;
+        lectureMembres();
     });
 
 });
@@ -55,28 +55,30 @@ function valideEmail(Email) {
  * Penser à commenter la méthode POST.
  */
 
-//function lectureMembres() {
-//    $.ajax({
-//        type: "GET",
-//        url: "getUsers",
-//        data: "{}",
-//        contentType: "application/json; charset=utf-8",
-//        dataType: "json",
-//        success: function (response) {
-//            var users = response.d;
-//            $("#testContenu").empty();
-//            $.each(users, function (index, user) {
-//                $("#testContenu").append('<p><strong>' + user.firstname + ' ' +
-//                        user.lastname + '</strong><br />Promotion: ' +
-//                        user.promotion + '<br /> Email: ' +
-//                        user.email + '</p>');
-//            });
-//        },
-//        failure: function (message) {
-//            $("#testContenu").text(message);
-//        }
-//    });
-//}
+function lectureMembres(){
+    $.ajax({
+        type: "GET",
+        url: "localhost:8080/petoile/web/app_dev.php/users",
+        data: "{}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (response) {
+            var users = response.d;
+            $("#testContenu").empty();
+            $.each(users, function (index, user) {
+                $("#testContenu").append('<p><strong>' + user.firstname + ' ' +
+                        user.lastname + '</strong><br />Promotion: ' +
+                        user.promotion + '<br /> Email: ' +
+                        user.email + '</p>');
+            });
+            alert("success !");
+            },
+            failure: function (message) {
+                $("#testContenu").text(message);
+                alert("fail la putain de toi");
+        }
+        });
+}
 
 /*
  * Pour tester le POST.
@@ -101,3 +103,4 @@ function valideEmail(Email) {
 //        }
 //    });
 //}
+
