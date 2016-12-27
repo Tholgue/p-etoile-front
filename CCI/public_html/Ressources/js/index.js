@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $("#register").submit(function () {
-
+        event.preventDefault();
         if ($("#inputNom").val() == "") {
             alert("Merci de saisir votre nom");
             $("#inputNom").focus();
@@ -36,7 +36,6 @@ $(document).ready(function () {
         //inscriptionMembre;
         lectureMembres();
     });
-
 });
 
 function valideEmail(Email) {
@@ -58,24 +57,23 @@ function valideEmail(Email) {
 function lectureMembres(){
     $.ajax({
         type: "GET",
-        url: "localhost:8080/petoile/web/app_dev.php/users",
-        data: "{}",
+        url: "http://localhost:8080/petoile/web/app_dev.php/users",
+        data:{ },
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        success: function (response) {
-            var users = response.d;
-            $("#testContenu").empty();
-            $.each(users, function (index, user) {
-                $("#testContenu").append('<p><strong>' + user.firstname + ' ' +
+        success:
+            function (data) {
+                console.log("success", data);
+                $.each(data, function (index, user) {
+                    $("#testContenu").append('<p><strong>' + user.firstname + ' ' +
                         user.lastname + '</strong><br />Promotion: ' +
                         user.promotion + '<br /> Email: ' +
                         user.email + '</p>');
-            });
-            alert("success !");
+                });
             },
-            failure: function (message) {
+            failure:
+                function (message) {
                 $("#testContenu").text(message);
-                alert("fail la putain de toi");
         }
         });
 }
@@ -103,4 +101,3 @@ function lectureMembres(){
 //        }
 //    });
 //}
-
