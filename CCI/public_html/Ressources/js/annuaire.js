@@ -1,43 +1,30 @@
-var apiURL = 'https://api.github.com/repos/vuejs/vue/commits?per_page=3&sha='
+$(document).ready(function () {
+  lectureMembres();
+});
 
-var demo = new Vue({
-
-  el: '#demo',
-
-  data: {
-    branches: ['master', 'dev'],
-    currentBranch: 'master',
-    commits: null
-  },
-
-  created: function () {
-    this.fetchData()
-  },
-
-  watch: {
-    currentBranch: 'fetchData'
-  },
-
-  filters: {
-    truncate: function (v) {
-      var newline = v.indexOf('\n')
-      return newline > 0 ? v.slice(0, newline) : v
-    },
-    formatDate: function (v) {
-      return v.replace(/T|Z/g, ' ')
-    }
-  },
-
-  methods: {
-    fetchData: function () {
-      var xhr = new XMLHttpRequest()
-      var self = this
-      xhr.open('GET', apiURL + self.currentBranch)
-      xhr.onload = function () {
-        self.commits = JSON.parse(xhr.responseText)
-        console.log(self.commits[0].html_url)
-      }
-      xhr.send()
-    }
-  }
-})
+function lectureMembres(){
+    authorizationToken = ;
+    $.ajax({
+        type: "GET",
+        beforeSend: function(request) {
+            request.setRequestHeader("Authority", authorizationToken);
+        },
+        url: "http://localhost:8080/p-etoile-master/web/app_dev.php/users",
+        data:{},
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success:
+            function (data) {
+                $.each(data, function (index, user) {
+                    $("#listeMembres").append('<p><strong>' + user.firstname + ' ' +
+                        user.lastname + '</strong> -- Promotion: ' +
+                        user.promotion + ' -- Email: ' +
+                        user.email + ' <button class="btn btn-primary">Details</button></p>');
+                });
+            },
+        failure:
+            function (message) {
+                $("#listeMembres").text(message);
+            }
+    });
+}
