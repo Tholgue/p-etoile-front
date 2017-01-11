@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Plateforme CS2i</title>
         <link href="../Ressources/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="../Ressources/dist/js/bootstrap.min.js"></script>
-        <script src="../Ressources/js/index.js"></script>
-        <title>Inscription</title>
     </head>
-
     <body>
+        <script src="../Ressources/dist/js/bootstrap.min.js"></script>
+        <script src="../Ressources/dist/js/sammy.js"></script>
+        <script src="../Ressources/dist/js/sammy.template.js"></script>
+        <script src="../Ressources/js/app.js"></script>
+        <script src="../Ressources/js/inscription.js"></script>
+        <script src="../Ressources/js/accueil.js"></script>
+        
         <header>
             <nav class="navbar navbar-inverse">
                 <div class="container">
@@ -22,90 +26,43 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">CS2i</a>
+                        <a class="navbar-brand" href="#/">CS2i</a>
                     </div>
                     <div id="navbar" class="collapse navbar-collapse" aria-expanded="false">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Accueil</a></li>
-                            <li><a href="">Inscription</a></li>
+                            <li class="active"><a href="#/">Accueil</a></li>
+                            <li><a href="#/inscription">Inscription</a></li>                           
                         </ul>
-                        <form class="navbar-form navbar-right">
+                        <ul id="accessProfil" class="nav navbar-nav navbar-right" style="display: none;">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon profil <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#/profil">Accéder à mon profil</a></li>
+                                    <li><a href="#">Modifier mon CV</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Se déconnecter</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form id="formConnexion" class="navbar-form navbar-right">
                             <div class="form-group">
                                 <input type="text" placeholder="Email" class="form-control">
                             </div>
                             <div class="form-group">
                                 <input type="text" placeholder="Password" class="form-control">
                             </div>
-                            <button type="submit" class="btn btn-success">Se connecter</button>
+                            <button type="submit" id="btn_connexion" class="btn btn-success">Se connecter</button>
                         </form>
                     </div>
                 </div>
             </nav>
         </header>
-        <div class="container">
-            <form role="form" id="register">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-8">
-                        <h1> Inscription <br/> <small> Renseigner vos informations </small></h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-3">
-                        <div class="form-group">
-                            <label for="Nom">Nom</label>
-                            <input type="text" class="form-control" id="inputNom" placeholder="Nom">
-                        </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-3">
-                        <div class="form-group">
-                            <label for="Prenom">Prénom</label>
-                            <input type="text" class="form-control" id="inputPrenom" placeholder="Prénom">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-3">
-                        <div class="form-group">
-                            <label for="Promotion">Promotion</label>
-                            <input type="text" class="form-control" id="inputPromotion" placeholder="Promotion">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-7">
-                        <div class="form-group">
-                            <label for="Email">Email address</label>
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter email">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-3">
-                        <div class="form-group">
-                            <label for="Password">Mot de passe</label>
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
-                        </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-3">
-                        <div class="form-group">
-                            <label for="Vpassword">Vérification mot de passe</label>
-                            <input type="password" class="form-control" id="inputValidation" placeholder="Vérification mot de passe">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-offset-5  col-md-1">
-                        <button type="btn_inscription" class="btn btn-primary">S'incrire</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="statutInscription">
-                    </div>
-                </div>
-            </form>
+        <div id="app">
+            <!-- block will be there  -->
         </div>
+        <hr>
+        <footer>
+            <p>2016, CS2i Lorient.</p>
+        </footer>
     </body>
 </html>

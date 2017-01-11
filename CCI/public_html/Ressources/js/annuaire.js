@@ -3,7 +3,8 @@ $(document).ready(function () {
 });
 
 function lectureMembres(){
-    authorizationToken = ;
+    localStorage
+    var authorizationToken = localStorage.getItem("authorizationToken");
     $.ajax({
         type: "GET",
         beforeSend: function(request) {
