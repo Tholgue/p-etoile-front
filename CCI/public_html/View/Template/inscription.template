@@ -64,4 +64,4 @@
     </form>
 </div>
 
-<script type="text/javascript" src="../Ressources/js/inscription.js"></script>
+<script type="text/javascript" src="../Ressources/js/blocks/inscription.js"></script>

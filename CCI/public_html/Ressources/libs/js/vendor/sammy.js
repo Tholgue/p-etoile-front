@@ -2154,4 +2154,3 @@ $.extend(Sammy.DefaultLocationProxy.prototype , {
 
   return Sammy;
 });
-

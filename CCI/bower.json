@@ -1,13 +1,40 @@
 {
-    "name": "HTML5Application",
+    "name": "yorick.becmeur",
     "version": "1.0.0",
-    "main": "path/to/main.css",
-    "ignore": [
-        ".jshintrc",
-        "**/*.txt"
-    ],
     "dependencies": {
+        "bootstrap": "latest",
+        "jquery": "1.12.4",
+        "sammy": "latest",
+        "js-cookie": "latest"
     },
-    "devDependencies": {
+    "cInstall":{
+        "folder":{
+            "js": "public_html/Ressources/libs/js/vendor/",
+            "css": "public_html/Ressources/libs/css/",
+            "otf, eot, svg, ttf, woff, woff2": "public_html/Ressources/libs/fonts/"
+        },
+        "option":{
+            "default": "public"
+        },
+        "source":{
+            "bootstrap":{
+                "glyphicons-halfings-regular.*": "dist/fonts/*",
+                "bootstrap.js": "dist/js/bootstrap.js",
+                "bootstrap.min.js": "dist/js/bootstrap.min.js",
+                "bootstrap.css": "dist/css/bootstrap.css",
+                "bootstrap.min.css": "dist/css/bootstrap.min.css"
+            },
+            "sammy":{
+                "sammy.js": "lib/sammy.js",
+                "sammy.template.js": "lib/plugins/sammy.template.js"
+            },
+            "jquery":{
+                "jquery.min.js": "dist/jquery.min.js"              
+            },
+            "js-cookie":{
+                "js.cookie.js": "src/js.cookie.js"
+            }
+        }
     }
 }
+
