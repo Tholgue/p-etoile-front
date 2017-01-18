@@ -5,11 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Plateforme CS2i</title>
-        <link href="../Ressources/libs/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../Ressources/libs/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../Ressources/libs/css/pace-theme-flash.css" rel="stylesheet"/>
         <script src="../Ressources/libs/js/vendor/jquery.min.js"></script>
         <script src="../Ressources/libs/js/vendor/bootstrap.min.js"></script>
         <script src="../Ressources/libs/js/vendor/sammy.js"></script>
         <script src="../Ressources/libs/js/vendor/sammy.template.js"></script>
+        <script src="../Ressources/libs/js/vendor/js.cookie.js"></script>
+        <script src="../Ressources/libs/js/vendor/pace.js"></script>
     </head>
     <body>
         <script src="../Ressources/js/main/app.js"></script>
@@ -37,19 +40,19 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon profil <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#/profil">Accéder à mon profil</a></li>
-                                    <li><a href="#">Modifier mon CV</a></li>
+                                    <li><a href="">Accéder à mon profil</a></li>
+                                    <li><a href="">Modifier mon CV</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#">Se déconnecter</a></li>
+                                    <li><a id="btn_deconnexion" href="">Se déconnecter</a></li>
                                 </ul>
                             </li>
                         </ul>
                         <form id="formConnexion" class="navbar-form navbar-right">
                             <div class="form-group">
-                                <input type="text" placeholder="Email" class="form-control">
+                                <input id="inputLogin" type="text" placeholder="Email" class="form-control">
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Password" class="form-control">
+                                <input id="inputPwd" type="password" placeholder="Password" class="form-control">
                             </div>
                             <button type="submit" id="btn_connexion" class="btn btn-success">Se connecter</button>
                         </form>

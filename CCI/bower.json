@@ -5,7 +5,8 @@
         "bootstrap": "latest",
         "jquery": "1.12.4",
         "sammy": "latest",
-        "js-cookie": "latest"
+        "js-cookie": "latest",
+        "pace": "latest"
     },
     "cInstall":{
         "folder":{
@@ -33,6 +34,10 @@
             },
             "js-cookie":{
                 "js.cookie.js": "src/js.cookie.js"
+            },
+            "pace":{
+                "pace.js": "pace.js",
+                "pace-theme-flash.css": "/themes/blue/pace-theme-flash.css"
             }
         }
     }

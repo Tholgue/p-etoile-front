@@ -6,7 +6,6 @@
     var app = Sammy.apps.body;
 
     app.get('#/inscription', function (context) {
-        console.log("Youre in the inscription route");
         context.render("Template/inscription.template",
                 function (output) {
                     $("#app").html(output);
@@ -18,15 +17,9 @@
  * Gestion des événements dans le bloc
  */
 $(document).ready(function () {
-    
+
     $("#btn_inscription").click(function () {
         inscription();
-    });
-
-    $("#btn_connexion").click(function () {
-        event.preventDefault();
-        $("#formConnexion").hide();
-        $("#accessProfil").show();
     });
 });
 
@@ -53,7 +46,7 @@ function inscription() {
         } else if (password !== validPassword) {
             alert("Les mots de passe ne correspondent pas");
         } else {
-            //postMembre();
+            postMembre();
             alert("You did it bro! Go take a break now...");
         }
     }
@@ -76,25 +69,24 @@ function valideEmail(Email) {
  * POST, url fait référence à la méthode présente en BackEnd
  */
 function postMembre() {
-    
-    var name = $("#inputNom").val();
-    var firstname = $("#inputPrenom").val();
-    var promotion = $("#inputPromotion").val();
-    var mail = $("#inputEmail").val();
-    var password = $("#inputPassword").val();
-    var login = $("#inputPrenom").val().substring(0, 1) + $("#inputNom").val();
+
+    var data = {};
+    data.firstname = $("#inputPrenom").val();
+    data.lastname = $("#inputNom").val();
+    data.email = $("#inputEmail").val();
+    data.plainPassword = $("#inputPassword").val();
 
     $.ajax({
         type: "POST",
-        url: "http://localhost:8080/p-etoile-master/web/app_dev.php/users",
-        data: JSON.stringify({firstname: firstname, lastname: name, email: mail, password: password, promotion: promotion, login: login}),
+        url: "http://localhost:80/p-etoile-master/web/app_dev.php/addUser",
+        data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function () {
-            alert("Inscription OK !");
+            alert("Inscription réussie !");
         },
         failure: function () {
-            alert("Inscription Fail !");
+            alert("Echec de l'inscription");
         }
     });
 }
