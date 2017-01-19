@@ -78,7 +78,7 @@ function postMembre() {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost:80/p-etoile-master/web/app_dev.php/addUser",
+        url: "http://localhost:8080/addUser",
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         dataType: "json",

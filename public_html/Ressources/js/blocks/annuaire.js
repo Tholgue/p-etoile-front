@@ -10,7 +10,7 @@ function lectureMembres(){
         beforeSend: function(request) {
             request.setRequestHeader("Authority", authorizationToken);
         },
-        url: "http://localhost:8080/p-etoile-master/web/app_dev.php/users",
+        url: "http://localhost:8080/users",
         data:{},
         contentType: "application/json; charset=utf-8",
         dataType: "json",

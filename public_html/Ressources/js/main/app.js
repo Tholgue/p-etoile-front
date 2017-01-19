@@ -35,7 +35,7 @@ function connexion() {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost:80/p-etoile-master/web/app_dev.php/auth-tokens",
+        url: "http://localhost:8080/auth-tokens",
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -57,7 +57,7 @@ function deconnexion() {
     $.ajax({
         type: "DELETE",
         headers : { 'X-Auth-Token': Cookies.get('token') },
-        url: "http://localhost:80/p-etoile-master/web/app_dev.php/auth-tokens/" + Cookies.get('idToken'),
+        url: "http://localhost:8080/auth-tokens/" + Cookies.get('idToken'),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function () {
