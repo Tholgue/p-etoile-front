@@ -6,6 +6,6 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  config.vm.box = "guorblaùm/p-etoile-front"
+  config.vm.box = "guorblam/p-etoile-front"
   config.vm.network "forwarded_port", guest: 80, host: 8081
 end
