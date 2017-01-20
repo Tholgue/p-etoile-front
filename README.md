@@ -1,0 +1,11 @@
+Pour lancer le projet :
+ - Installer vagrant : https://www.vagrantup.com/
+ - Installer git : https://git-for-windows.github.io/
+ - Cloner le projet :
+ 	- git clone https://github.com/guorblam/p-etoile-front
+  - cd p-etoile-back
+ - Importer la box vagrant du projet
+ 	- vagrant box add guorblam/p-etoile-front
+ - Démarrer la box vagrant
+ 	- vagrant up
+ - L'application est disponible à localhost:8081
