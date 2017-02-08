@@ -9,13 +9,17 @@
             <div class="col-md-offset-2 col-md-3">
                 <div class="form-group">
                     <label for="Nom">Nom</label>
-                    <input type="text" class="form-control" id="inputNom" placeholder="Nom">
+                    <input type="text" class="form-control" id="inputNom" placeholder="Nom" data-validation="length" 
+                           data-validation-length="min3" 
+                           data-validation-error-msg="< 3 caractères"> 
                 </div>
             </div>
             <div class="col-md-offset-1 col-md-3">
                 <div class="form-group">
                     <label for="Prenom">Prénom</label>
-                    <input type="text" class="form-control" id="inputPrenom" placeholder="Prénom">
+                    <input type="text" class="form-control" id="inputPrenom" placeholder="Prénom" data-validation="length" 
+                           data-validation-length="min3" 
+                           data-validation-error-msg="< 3 caractères">
                 </div>
             </div>
         </div>
@@ -24,16 +28,19 @@
             <div class="col-md-offset-2 col-md-3">
                 <div class="form-group">
                     <label for="Promotion">Promotion</label>
-                    <input type="text" class="form-control" id="inputPromotion" placeholder="Promotion">
+                    <input type="text" class="form-control" id="inputPromotion" placeholder="Promotion" data-validation="number" 
+                           data-validation-help="01 - XX" 
+                           data-validation-error-msg="La promotion doit être un chiffre">
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-offset-2 col-md-7">
+            <div class="col-md-offset-2 col-md-3">
                 <div class="form-group">
                     <label for="Email">Email address</label>
-                    <input type="text" class="form-control" id="inputEmail" placeholder="Enter email">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Enter email" data-validation="email" 
+                           data-validation-error-msg="L'adresse mail n'est pas valide">
                 </div>
             </div>
         </div>
@@ -42,19 +49,23 @@
             <div class="col-md-offset-2 col-md-3">
                 <div class="form-group">
                     <label for="Password">Mot de passe</label>
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
+                    <input name="pass_confirmation" type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" data-validation="strength" 
+                           data-validation-strength="3" 
+                           data-validation-error-msg="Mot de passe invalide"
+                           data-validation-help="> 8 caractères dont une maj & un chiffre">
                 </div>
             </div>
             <div class="col-md-offset-1 col-md-3">
                 <div class="form-group">
-                    <label for="Vpassword">Vérification mot de passe</label>
-                    <input type="password" class="form-control" id="inputValidation" placeholder="Vérification mot de passe">
+                    <label for="Vpassword">Confirmation mot de passe</label>
+                    <input name="pass" type="password" class="form-control" id="inputValidation" placeholder="Vérification mot de passe" data-validation="confirmation"
+                           data-validation-error-msg="Le mot de passe ne correpond pas">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-5  col-md-1">
-                <button type="button" id="btn_inscription" class="btn btn-primary">S'incrire</button>
+                <button type="button" id="btn_inscription" class="btn btn-primary">S'inscrire</button>
             </div>
         </div>
         <div class="row">

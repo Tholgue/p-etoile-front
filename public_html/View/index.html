@@ -6,19 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Plateforme CS2i</title>
         <link href="../Ressources/libs/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../Ressources/libs/css/theme-default.css" rel="stylesheet"/>
         <link href="../Ressources/libs/css/pace-theme-flash.css" rel="stylesheet"/>
+        <link href="../Ressources/libs/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../Ressources/libs/css/bootstrap-social.css" rel="stylesheet"/>
         <script src="../Ressources/libs/js/vendor/jquery.min.js"></script>
         <script src="../Ressources/libs/js/vendor/bootstrap.min.js"></script>
         <script src="../Ressources/libs/js/vendor/sammy.js"></script>
         <script src="../Ressources/libs/js/vendor/sammy.template.js"></script>
         <script src="../Ressources/libs/js/vendor/js.cookie.js"></script>
         <script src="../Ressources/libs/js/vendor/pace.js"></script>
+        <script src="../Ressources/libs/js/vendor/jquery.form-validator.min.js"></script>
     </head>
     <body>
         <script src="../Ressources/js/main/app.js"></script>
         <script src="../Ressources/js/blocks/inscription.js"></script>
         <script src="../Ressources/js/blocks/accueil.js"></script>
-        
+
         <header>
             <nav class="navbar navbar-inverse">
                 <div class="container">
@@ -55,6 +59,12 @@
                                 <input id="inputPwd" type="password" placeholder="Password" class="form-control">
                             </div>
                             <button type="submit" id="btn_connexion" class="btn btn-success">Se connecter</button>
+                            <a id="btn_google" class="btn btn-social-icon btn-google">
+                                <i class="fa fa-google"></i>
+                            </a>
+                            <a id="btn_linkedin" class="btn btn-social-icon btn-linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
                         </form>
                     </div>
                 </div>

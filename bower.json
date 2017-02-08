@@ -6,7 +6,10 @@
         "jquery": "1.12.4",
         "sammy": "latest",
         "js-cookie": "latest",
-        "pace": "latest"
+        "pace": "latest",
+        "Font-Awesome": "latest",
+        "bootstrap-social": "latest",
+        "jQuery-Form-Validator": "latest"
     },
     "cInstall":{
         "folder":{
@@ -38,6 +41,17 @@
             "pace":{
                 "pace.js": "pace.js",
                 "pace-theme-flash.css": "/themes/blue/pace-theme-flash.css"
+            },
+            "Font-Awesome":{
+                "font-awesome.css": "/css/font-awesome.css"
+            },
+            "bootstrap-social":{
+              "bootstrap-social.css": "bootstrap-social.css"  
+            },
+            "jQuery-Form-Validator":{
+                "jquery.form-validator.min.js": "/form-validator/jquery.form-validator.min.js",
+                "security.js": "/form-validator/security.js",
+                "theme-default.css": "/form-validator/theme-default.css"
             }
         }
     }

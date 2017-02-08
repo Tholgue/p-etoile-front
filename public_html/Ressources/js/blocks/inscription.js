@@ -18,6 +18,12 @@
  */
 $(document).ready(function () {
 
+    $.validate({
+        form: '#register',
+        modules: 'security',
+        onModulesLoaded: function () {}
+    });
+
     $("#btn_inscription").click(function () {
         inscription();
     });
@@ -47,22 +53,8 @@ function inscription() {
             alert("Les mots de passe ne correspondent pas");
         } else {
             postMembre();
-            alert("You did it bro! Go take a break now...");
         }
     }
-}
-
-/*
- * Vérification de l'email
- */
-function valideEmail(Email) {
-    var filtre = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    var valid = filtre.test(Email);
-
-    if (!valid) {
-        return true;
-    }
-    return false;
 }
 
 /*
