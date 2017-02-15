@@ -1,0 +1,76 @@
+<div class="container">
+    <form role="form" id="createAnnonce">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h1> Poster une annonce <br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-6">
+                <div class="form-group">
+                    <label for="Nom">Titre</label>
+                    <input type="text" class="form-control" id="inputTitre" placeholder="Intitulé de l'annonce" data-validation="length" 
+                           data-validation-length="min10" 
+                           data-validation-error-msg="< 10 caractères"> 
+                </div>
+            </div>
+        </div>
+
+        <div id="offre" class="row">
+            <div class="col-md-offset-2 col-md-3">
+                <div class="form-group">
+                    <label for="Offre">Type d'offre</label>
+                    <select id="selector" class="form-control">
+                        <option id="apprentissage">Apprentissage</option>
+                        <option id="cdi">CDI</option>
+                        <option id="stage">Stage</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+
+        <div id="specialisation" class="row">
+            <div class="col-md-offset-2 col-md-6">
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" id="dev" name="optradio">Développement
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="reseau" name="optradio">Système et réseau
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="form-group">
+                    <label for="Description">Description</label>
+                    <textarea class="form-control" placeholder="Description de l'offre" rows="20"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-3">
+                <div class="form-group">
+                    <label for="Email">Email de validation</label>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email de validation" data-validation="email" 
+                           data-validation-error-msg="L'adresse mail n'est pas valide">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-5  col-md-1">
+                <button type="button" id="btn_annonce" class="btn btn-primary">Valider</button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="statutAnnonce">
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="../Ressources/js/blocks/createAnnonce.js"></script>

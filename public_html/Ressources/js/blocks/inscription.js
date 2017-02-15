@@ -75,10 +75,11 @@ function postMembre() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function () {
-            alert("Inscription réussie !");
+            $("#alertError").hide();
+            $("#alertSuccess").show();
         },
         failure: function () {
-            alert("Echec de l'inscription");
+            $("#alertError").show();
         }
     });
 }

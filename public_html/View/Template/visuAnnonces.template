@@ -1,0 +1,13 @@
+<div class="container">
+    <form role="form" id="annonce">
+        Aucunes annonces disponibles 
+
+        <div class="row">
+            <div class="col-md-offset-5  col-md-1">
+                <a class="btn btn-success" href="#/createAnnonce">Poster une annonce</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="../Ressources/js/blocks/visuAnnonces.js"></script>
