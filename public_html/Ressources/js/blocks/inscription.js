@@ -67,6 +67,7 @@ function postMembre() {
     data.lastname = $("#inputNom").val();
     data.email = $("#inputEmail").val();
     data.plainPassword = $("#inputPassword").val();
+    data.promotion = $("#inputPromotion").val();
 
     $.ajax({
         type: "POST",
