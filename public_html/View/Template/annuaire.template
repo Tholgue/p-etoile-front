@@ -1,0 +1,129 @@
+<div class="container">
+    <form role="form" id="annonce">
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h1> Annuaire <br/>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-offset-0 col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <img src="../Ressources/images/default-pic.jpg" class="img-thumbnail" alt="..." width="100" height="100">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <strong>Yorick Becmeur - Master 1 - Spécialisation Développement</strong>
+                                        <p>Contact : y.becmeur@cs2i-lorient.fr</p>
+                                    </div>
+                                    <div class="col-md-2" id="btnDetailsProfil">
+                                        <a class="btn btn-success pull-right">Détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <img src="../Ressources/images/default-pic.jpg" class="img-thumbnail" alt="..." width="100" height="100">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <strong>Thomas Le Guen - Master 1 - Spécialisation Développement</strong>
+                                        <p>Contact : t.leguen@cs2i-lorient.fr</p>
+                                    </div>
+                                    <div class="col-md-2" id="btnDetailsProfil">
+                                        <a class="btn btn-success pull-right">Détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <img src="../Ressources/images/default-pic.jpg" class="img-thumbnail" alt="..." width="100" height="100">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <strong>Romain Duval - Master 1 - Spécialisation Développement</strong>
+                                        <p>Contact : r.duval@cs2i-lorient.fr</p>
+                                    </div>
+                                    <div class="col-md-2" id="btnDetailsProfil">
+                                        <a class="btn btn-success pull-right">Détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <img src="../Ressources/images/default-pic.jpg" class="img-thumbnail" alt="..." width="100" height="100">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <strong>Antoine Gainche - Master 1 - Spécialisation Systèmes et Réseaux</strong>
+                                        <p>Contact : b.bisson@cs2i-lorient.fr</p>
+                                    </div>
+                                    <div class="col-md-2" id="btnDetailsProfil">
+                                        <a class="btn btn-success pull-right">Détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <img src="../Ressources/images/default-pic.jpg" class="img-thumbnail" alt="..." width="100" height="100">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <strong>Baptiste Bisson - Licence Professionnelle - Spécialisation Développement</strong>
+                                        <p>Contact : b.bisson@cs2i-lorient.fr</p>
+                                    </div>
+                                    <div class="col-md-2" id="btnDetailsProfil">
+                                        <a class="btn btn-success pull-right">Détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Précédent</a></li>
+                        <li class="next"><a href="#">Suivant <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="../Ressources/js/blocks/annuaire.js"></script>

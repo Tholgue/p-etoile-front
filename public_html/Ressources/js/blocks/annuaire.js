@@ -1,6 +1,19 @@
-$(document).ready(function () {
-  lectureMembres();
-});
+/*
+ * Définition de la route
+ * Render le template en html dans la div "app"
+ */
+(function () {
+    var app = Sammy.apps.body;
+
+    app.get('#/annuaire', function (context) {
+        context.render("Template/annuaire.template",
+                function (output) {
+                    $("#app").html(output);
+                });
+    });
+})();
+
+
 
 function lectureMembres(){
     localStorage

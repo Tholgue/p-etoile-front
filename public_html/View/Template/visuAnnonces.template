@@ -1,7 +1,77 @@
 <div class="container">
     <form role="form" id="annonce">
-        Aucunes annonces disponibles 
 
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h1> Annonce <br/> <small> Rechercher les annonces </small></h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group col-md-3">
+                <select id="selector" class="form-control">
+                    <option id="dev">Développement</option>
+                    <option id="reseau">Réseau</option>
+                    <option id="cdi">CDI</option>
+                </select>   
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-offset-0 col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Offres d'apprentissage développement</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="titreAnnonce">
+                                    <strong>Offre d'apprentissage: Développeur d'applications web</strong>
+
+                                </div>
+                                <div id="bodyAnnonce">           
+                                    <a class="btn btn-success pull-right">Détails</a> 
+                                    <p>L'apprenti a pour rôle de maintenir les applications présente dans le système d'information de l'entreprise. 
+                                        De plus il devra développer de nouvelles applications via les méthodologies appliquées au sein de l'entreprise.</p>                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="titreAnnonce">
+                                    <strong>Offre d'apprentissage: Intitulé de l'offre</strong>
+
+                                </div>
+                                <div id="bodyAnnonce">           
+                                    <a class="btn btn-success pull-right">Détails</a> 
+                                    <p>Description rapide</p>                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Précédent</a></li>
+                        <li class="next"><a href="#">Suivant <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-offset-5  col-md-1">
                 <a class="btn btn-success" href="#/createAnnonce">Poster une annonce</a>
