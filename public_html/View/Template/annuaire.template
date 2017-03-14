@@ -36,7 +36,7 @@
                                         <p>Contact : y.becmeur@cs2i-lorient.fr</p>
                                     </div>
                                     <div class="col-md-2" id="btnDetailsProfil">
-                                        <a class="btn btn-success pull-right">Détails</a>
+                                        <a href="#/profile" class="btn btn-success pull-right">Détails</a>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                         <p>Contact : t.leguen@cs2i-lorient.fr</p>
                                     </div>
                                     <div class="col-md-2" id="btnDetailsProfil">
-                                        <a class="btn btn-success pull-right">Détails</a>
+                                        <a href="#/profile" class="btn btn-success pull-right">Détails</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                         <p>Contact : r.duval@cs2i-lorient.fr</p>
                                     </div>
                                     <div class="col-md-2" id="btnDetailsProfil">
-                                        <a class="btn btn-success pull-right">Détails</a>
+                                        <a href="#/profile" class="btn btn-success pull-right">Détails</a>
                                     </div>
                                 </div>
                             </div>
@@ -87,10 +87,10 @@
                                     </div>
                                     <div class="col-md-9">
                                         <strong>Antoine Gainche - Master 1 - Spécialisation Systèmes et Réseaux</strong>
-                                        <p>Contact : b.bisson@cs2i-lorient.fr</p>
+                                        <p>Contact : a.gainche@cs2i-lorient.fr</p>
                                     </div>
                                     <div class="col-md-2" id="btnDetailsProfil">
-                                        <a class="btn btn-success pull-right">Détails</a>
+                                        <a href="#/profile" class="btn btn-success pull-right">Détails</a>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@
                                         <p>Contact : b.bisson@cs2i-lorient.fr</p>
                                     </div>
                                     <div class="col-md-2" id="btnDetailsProfil">
-                                        <a class="btn btn-success pull-right">Détails</a>
+                                        <a href="#/profile" class="btn btn-success pull-right">Détails</a>
                                     </div>
                                 </div>
                             </div>

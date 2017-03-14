@@ -1,0 +1,8 @@
+<div class="container">
+    <form role="form" id="annonce">
+
+    </form>
+</div>
+
+<script type="text/javascript" src="../Ressources/js/blocks/profile.js"></script>
+
